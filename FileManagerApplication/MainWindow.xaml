@@ -8,6 +8,7 @@
         Title="MainWindow" Height="600" Width="1024"
         WindowStyle="None"
         ResizeMode="NoResize"
+        FontSize="15"
         WindowStartupLocation="CenterScreen"
         WindowState="Maximized"
         Background="Transparent">
@@ -16,6 +17,43 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/assets/icons.xaml"></ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
+            <Style x:Key="MenuButtonStyle" TargetType="{x:Type ToggleButton}">
+                <Setter Property="Background" Value="WhiteSmoke"></Setter>
+                <Setter Property="Foreground" Value="Gray"></Setter>
+                <Setter Property="HorizontalContentAlignment" Value="Left"></Setter>
+                <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+                <Setter Property="Height" Value="40"></Setter>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type ToggleButton}">
+                            <Border Background="{TemplateBinding Background}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="20,0,0,20">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="80"></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Path Data="{TemplateBinding Tag}"
+                                          Style="{StaticResource {x:Type Path}}"
+                                          Fill="{TemplateBinding Foreground}"></Path>
+                                    <ContentPresenter TextBlock.TextAlignment="Left"
+                                                      VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                                      Content="{TemplateBinding Content}"
+                                                      Grid.Column="1"></ContentPresenter>
+                                </Grid>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsChecked" Value="True">
+                                    <Setter Property="Background" Value="#E1E4E6"></Setter>
+                                    <Setter Property="Foreground" Value="Teal"></Setter>
+                                    <Setter Property="FontWeight" Value="SemiBold"></Setter>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
         </ResourceDictionary>
     </Window.Resources>
 
@@ -36,7 +74,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition></RowDefinition>
                     <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
                     <RowDefinition></RowDefinition>
                     <RowDefinition></RowDefinition>
                 </Grid.RowDefinitions>
@@ -47,7 +85,7 @@
                 <Separator VerticalAlignment="Bottom"
                            Background="LightGray"
                            Width="200"></Separator>
-                <StackPanel Grid.Row="1" VerticalAlignment="Center">
+                <StackPanel Grid.Row="1" VerticalAlignment="Center" Width="200">
                     <!--Profile Button-->
                     <Button Grid.Row="1" Content="Abdul Wahab">
                         <Button.Style>
@@ -85,7 +123,7 @@
                             </Style>
                         </Button.Style>
                     </Button>
-                    <Grid Width="50" HorizontalAlignment="Left">
+                    <Grid Width="70" HorizontalAlignment="Left">
                         <TextBlock Text="Logout" 
                                    FontSize="15"
                                    Foreground="Silver"
@@ -94,6 +132,48 @@
                               HorizontalAlignment="Right"
                               VerticalAlignment="Center"></Path>
                     </Grid>
+                </StackPanel>
+                
+                <Separator VerticalAlignment="Bottom"
+                           Background="LightGray"
+                           Width="200"
+                           Grid.Row="1"></Separator>
+                <!--Menu-->
+                <StackPanel Grid.Row="2"
+                            Margin="0,10"
+                            Width="200"
+                            >
+                    <RadioButton
+                        IsChecked="True"
+                        GroupName="Menu"
+                        Style="{StaticResource MenuButtonStyle}"
+                        Tag="{StaticResource home}"
+                        Content="Home"></RadioButton>
+                    <RadioButton
+                        GroupName="Menu"
+                        Style="{StaticResource MenuButtonStyle}"
+                        Tag="{StaticResource sharedfolders}"
+                        Content="Shared Files"></RadioButton>
+                    <RadioButton
+                        GroupName="Menu"
+                        Style="{StaticResource MenuButtonStyle}"
+                        Tag="{StaticResource starred}"
+                        Content="Starred"></RadioButton>
+                    <RadioButton
+                        GroupName="Menu"
+                        Style="{StaticResource MenuButtonStyle}"
+                        Tag="{StaticResource statistics}"
+                        Content="Statistics"></RadioButton>
+                    <RadioButton
+                        GroupName="Menu"
+                        Style="{StaticResource MenuButtonStyle}"
+                        Tag="{StaticResource settings}"
+                        Content="Settings"></RadioButton>
+                    <RadioButton
+                        GroupName="Menu"
+                        Style="{StaticResource MenuButtonStyle}"
+                        Tag="{StaticResource support}"
+                        Content="Support"></RadioButton>
                 </StackPanel>
             </Grid>
         </Grid>
