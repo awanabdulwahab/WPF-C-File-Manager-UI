@@ -1,0 +1,17 @@
+D:\NETSOL\Wpf Applications\FileManagerApplication\FileManagerApplication\bin\Debug\FileManagerApplication.exe.config
+D:\NETSOL\Wpf Applications\FileManagerApplication\FileManagerApplication\bin\Debug\FileManagerApplication.exe
+D:\NETSOL\Wpf Applications\FileManagerApplication\FileManagerApplication\bin\Debug\FileManagerApplication.pdb
+D:\NETSOL\Wpf Applications\FileManagerApplication\FileManagerApplication\obj\Debug\FileManagerApplication.csproj.AssemblyReference.cache
+D:\NETSOL\Wpf Applications\FileManagerApplication\FileManagerApplication\obj\Debug\MainWindow.g.cs
+D:\NETSOL\Wpf Applications\FileManagerApplication\FileManagerApplication\obj\Debug\App.g.cs
+D:\NETSOL\Wpf Applications\FileManagerApplication\FileManagerApplication\obj\Debug\FileManagerApplication_MarkupCompile.cache
+D:\NETSOL\Wpf Applications\FileManagerApplication\FileManagerApplication\obj\Debug\FileManagerApplication_MarkupCompile.lref
+D:\NETSOL\Wpf Applications\FileManagerApplication\FileManagerApplication\obj\Debug\MainWindow.baml
+D:\NETSOL\Wpf Applications\FileManagerApplication\FileManagerApplication\obj\Debug\FileManagerApplication.g.resources
+D:\NETSOL\Wpf Applications\FileManagerApplication\FileManagerApplication\obj\Debug\FileManagerApplication.Properties.Resources.resources
+D:\NETSOL\Wpf Applications\FileManagerApplication\FileManagerApplication\obj\Debug\FileManagerApplication.csproj.GenerateResource.cache
+D:\NETSOL\Wpf Applications\FileManagerApplication\FileManagerApplication\obj\Debug\FileManagerApplication.csproj.CoreCompileInputs.cache
+D:\NETSOL\Wpf Applications\FileManagerApplication\FileManagerApplication\obj\Debug\FileManagerApplication.exe
+D:\NETSOL\Wpf Applications\FileManagerApplication\FileManagerApplication\obj\Debug\FileManagerApplication.pdb
+D:\NETSOL\Wpf Applications\FileManagerApplication\FileManagerApplication\obj\Debug\Assets\icons.baml
+D:\NETSOL\Wpf Applications\FileManagerApplication\FileManagerApplication\obj\Debug\App.baml
