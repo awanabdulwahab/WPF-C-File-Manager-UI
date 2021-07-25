@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FileManagerApplication"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="1024"
+        Title="MainWindow" Height="835" Width="1340"
         WindowStyle="None"
         ResizeMode="NoResize"
         FontSize="15"
@@ -72,11 +72,12 @@
             </Grid.ColumnDefinitions>
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="100"></RowDefinition>
+                    <RowDefinition Height="150"></RowDefinition>
                     <RowDefinition Height="Auto"></RowDefinition>
                     <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="150"></RowDefinition>
+                    <RowDefinition Height="100"></RowDefinition>
                 </Grid.RowDefinitions>
         <!--Logo-->
             <TextBlock FontSize="30" Text="File MG" 
@@ -126,7 +127,7 @@
                     <Grid Width="70" HorizontalAlignment="Left">
                         <TextBlock Text="Logout" 
                                    FontSize="15"
-                                   Foreground="Silver"
+                                   Foreground="Gray"
                                    VerticalAlignment="Center"></TextBlock>
                         <Path Data="{StaticResource right}"
                               HorizontalAlignment="Right"
@@ -175,6 +176,36 @@
                         Tag="{StaticResource support}"
                         Content="Support"></RadioButton>
                 </StackPanel>
+                <Grid Grid.Row="4">
+                <Rectangle RadiusX="10"
+                           RadiusY="10"
+                           Stroke="Silver"
+                           StrokeThickness="1"
+                           StrokeDashArray="5"
+                           Width="200"></Rectangle>
+                   <StackPanel HorizontalAlignment="Center"
+                               VerticalAlignment="Center">
+                        <Path Data="{StaticResource documentfile}"
+                              Style="{StaticResource {x:Type Path}}"></Path>
+                        <TextBlock Text="Drop File"
+                               Foreground="Gray"
+                                   Margin="0,5"></TextBlock>
+                    </StackPanel>
+                </Grid>
+                <Button Grid.Row="5" 
+                        Margin="25"
+                        Background="Teal"
+                        Foreground="White"
+                        Content="Updload File"
+                        Height="50"
+                        >
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"></Setter>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+
             </Grid>
         </Grid>
     </Border>
